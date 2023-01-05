@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Layout from "../components/Layout"
 
 
 const Stack = () => {
@@ -56,10 +57,12 @@ const Stack = () => {
 
 export default function Form() {
   return (
+    <Layout>
     <div>
       <h1>Hello selamat datang di halaman Form </h1>
       <Stack />
  
     </div>
+    </Layout>
   );
 }

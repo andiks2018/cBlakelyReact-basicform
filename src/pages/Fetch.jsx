@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Layout from '../components/Layout'
 
 const Pengunjung = ()=>{
     const[name, setName]=useState("")
@@ -50,6 +51,7 @@ const Pengunjung = ()=>{
         }
     }, [])
     return(
+        
         <div>
             <h1>Pengunjung</h1>
             <hr />
@@ -65,6 +67,9 @@ const Pengunjung = ()=>{
         </div>
     )
 }
+
+
+// AXIOS
 const Axios = ()=>{
 
     const [user, setUser]=useState([])
@@ -103,8 +108,11 @@ const Axios = ()=>{
         </div>
     )
 }
+
+
 export default function Fetch() {
   return (
+    <Layout>
     <div className=' ml-5 space-y-5'>
         <h1 className='mb-6 uppercase text-xl font-bold text-center underline'>Halaman fecth</h1>
         <Pengunjung />
@@ -112,5 +120,6 @@ export default function Fetch() {
         <Axios />
         
     </div>
+    </Layout>
   )
 }

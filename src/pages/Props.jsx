@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 //==================== Mybutton arrow function ====================================
 
@@ -50,6 +51,7 @@ function ProductCard(props) {
 
 export default function Props() {
   return (
+    <Layout>
     <div className="ml-5 space-y-5">
       <h1 className="uppercase">Halamaln props</h1> <hr />
       <div className="space-x-10 flex ">
@@ -69,5 +71,6 @@ export default function Props() {
         hargabarang={"2.000.000"} />
       </div>
     </div>
+    </Layout>
   );
 }

@@ -1,40 +1,21 @@
 import React from "react";
+import { useState } from "react";
 
+export default function Hapus2(){
 
-//kita baut button
-const HapusButton = (props)=>{
+  const [nilai, setNilai]=useState(10)
+
   return (
-    <button className=""
-    style={{
-      backgroundColor : props.kasihWarna,
-      color : props.kasihWarnaTulisan,
-      padding : "5px 20px",
-      borderRadius :"10px",
-    }}>Submit</button>
-  )
-}
-
-function TampilkanButton (){
-  return(
     <div>
-      <HapusButton  kasihWarna="blue" kasihWarnaTulisan='white'/>
-      <HapusButton  kasihWarna="blue" kasihWarnaTulisan='white'/>
-      <HapusButton  kasihWarna="blue" kasihWarnaTulisan='white'/>
-      <HapusButton  kasihWarna="blue" kasihWarnaTulisan='white'/>
-    </div>
-  )
-}
-
-
-
-// halaman utama
-export default function Hapus(){
-  return(
-    <div className="space-y-5">
-      <h1>Halaman Hapus</h1>
-      <hr />
-      <HapusButton />
-      <TampilkanButton />
+      <h1>Nilai {nilai}</h1>
+      <div className="">
+        <button className="bg-orange-500 px-6 " onClick={()=>{
+          setNilai(nilai+1)
+        }}>+</button>
+        <button className="bg-blue-500 px-6 " onClick={()=>{
+          setNilai(nilai-1)
+        }}>-</button>
+      </div>
     </div>
   )
 }
